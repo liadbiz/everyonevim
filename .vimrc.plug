@@ -1,0 +1,28 @@
+call plug#begin('~/.vim/plugged')
+
+" List of plugins
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'mbbill/undotree'
+Plug 'rking/ag.vim'
+Plug 'mileszs/ack.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-syntastic/syntastic'
+Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdcommenter'
+Plug 'pangloss/vim-javascript'
+Plug 'Valloric/YouCompleteMe'
+Plug 'ternjs/tern_for_vim'
+Plug 'nvie/vim-flake8'
+Plug 'drmingdrmer/vim-toggle-quickfix'
+Plug 'plasticboy/vim-markdown'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'lervag/vimtex'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+
+call plug#end()
+
