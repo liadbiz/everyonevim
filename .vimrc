@@ -8,6 +8,7 @@ set cursorline          " highlight current line
 set wildmenu            " visual autocomplete for command menu
 set lazyredraw          " redraw only when we need to.
 set number
+set guifont=Source\ Code\ Pro\ Semibold\ 12
 " }}}
 
 " abbrevations
@@ -70,10 +71,8 @@ nnoremap k gk
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>ez :vsp ~/.zshrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
-nnoremap <leader>w  <C-W><C-K>
-nnoremap <leader>s  <C-W><C-J>
-nnoremap <leader>a  <C-W><C-h>
-nnoremap <leader>d  <C-W><C-l>
+nnoremap <leader>w  :w
+nnoremap <leader>q  :q
 nnoremap <leader>o  :only<CR>
 nnoremap <leader>v  :sp<CR>
 nnoremap <leader>h  :vs<CR>
@@ -142,7 +141,7 @@ nnoremap <leader>tn :NERDTreeToggle<CR>
 
 "colorschema config
 syntax on
-colorscheme candy
+colorscheme hemisu
 "color dracula
 
 " ctrp settings
