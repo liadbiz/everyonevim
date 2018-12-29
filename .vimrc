@@ -36,11 +36,11 @@ augroup END
 " }}}
 
 " Space and Tab
-set softtabstop=4  " number of spaces in tab when editing
+set softtabstop=2  " number of spaces in tab when editing
 set expandtab       " tabs are spaces
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 set autoindent
 set textwidth=79
@@ -63,7 +63,7 @@ nnoremap E $
 " toggle undotree
 nnoremap <leader>u :UndotreeToggle<CR>
 " $/^ doesn't do anything
-nnoremap ,<space> :nohlsearch<CR>      " ,<space> to close search hilight
+nnoremap ,<space> :nohlsearch<CR>      " ,<space> to close search highlight
 nnoremap <space> za       "space open/closes folds
 nnoremap j gj
 nnoremap k gk
@@ -113,10 +113,16 @@ let g:ale_open_list = 1
 augroup FiletypeGroup
     autocmd!
     au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
-    au BufNewFile,BufRead *.wxml set filetype=html
+    au BufNewFile,BufRead *.wxml .vue set filetype=html
     au BufNewFile,BufRead *.wxss set filetype=css
 augroup END
 
+" vue setting
+autocmd FileType javascript,html,css,xml set ai
+autocmd FileType javascript,html,css,xml set sw=2
+autocmd FileType javascript,html,css,xml set ts=2
+autocmd FileType javascript,html,css,xml set sts=2
+autocmd FileType javascript,html,css,xml set expandtab
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'python': ['pylint'],
