@@ -1,4 +1,5 @@
-:set ignorecase" basiet config
+set ignorecase" basiet config
+set backspace=indent,eol,start
 " {{{
 set nocompatible
 filetype plugin on
@@ -8,7 +9,7 @@ set cursorline          " highlight current line
 set wildmenu            " visual autocomplete for command menu
 set lazyredraw          " redraw only when we need to.
 set number
-set guifont=Source\ Code\ Pro\ Semibold\ 12
+set wrap
 " }}}
 
 " abbrevations
@@ -45,6 +46,7 @@ set expandtab
 set autoindent
 set textwidth=79
 set fileformat=unix
+set formatoptions+=t
 
 " search settings
 set showmatch           " highlight matching [{()}]
@@ -71,8 +73,10 @@ nnoremap k gk
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>ez :vsp ~/.zshrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
-nnoremap <leader>w  :w
-nnoremap <leader>q  :q
+nnoremap <leader>w  <C-W><C-K>
+nnoremap <leader>s  <C-W><C-J>
+nnoremap <leader>a  <C-W><C-h>
+nnoremap <leader>d  <C-W><C-l>
 nnoremap <leader>o  :only<CR>
 nnoremap <leader>v  :sp<CR>
 nnoremap <leader>h  :vs<CR>
@@ -123,6 +127,7 @@ autocmd FileType javascript,html,css,xml set sw=2
 autocmd FileType javascript,html,css,xml set ts=2
 autocmd FileType javascript,html,css,xml set sts=2
 autocmd FileType javascript,html,css,xml set expandtab
+
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'python': ['pylint'],
@@ -147,8 +152,8 @@ nnoremap <leader>tn :NERDTreeToggle<CR>
 
 "colorschema config
 syntax on
-colorscheme hemisu
 "color dracula
+color monokai
 
 " ctrp settings
 "nnoremap <leader>p  :"CtrlP<CR>
@@ -213,7 +218,9 @@ let g:user_emmet_settings = {
 " ag settings
 nnoremap <leader>g  :Ag<space>
 " youcompleteme settings
-let g:ycm_python_binary_path = 'python'
+"let g:ycm_python_binary_path = 'python'
+let g:ycm_server_python_interpreter = '/usr/local/bin/python3.5'
+let g:ycm_path_to_python_interpreter = '~/.pyenv/shims/python3.6'
 let g:ctrlp_show_hidden = 1
 set completeopt-=preview
 let g:ycm_semantic_triggers = {

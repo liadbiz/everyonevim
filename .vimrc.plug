@@ -38,6 +38,11 @@ Plug 'airblade/vim-gitgutter'
 "Plug 'mhinz/vim-signify'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'mattn/gist-vim'
+Plug 'daeyun/vim-matlab'
+Plug 'JuliaEditorSupport/julia-vim'
+Plug 'hotoo/pangu.vim'
+Plug 'rizzatti/dash.vim'
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
